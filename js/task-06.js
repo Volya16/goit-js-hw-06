@@ -3,11 +3,10 @@ const inputField = document.querySelector("#validation-input");
 inputField.addEventListener("blur", onFocusChange);
 
 function onFocusChange(event) {
-    const symbolLength = inputField.dataset.length;
+    const symbolLength = Number(inputField.dataset.length);
+    const inputCotentLEngth = inputField.value.trim();
 
-    const inputCotentLEngth = inputField.value.length;
-
-    if (inputCotentLEngth === Number(symbolLength)) {
+    if (inputCotentLEngth === symbolLength) {
         inputField.classList.remove('invalid');
         inputField.classList.add('valid');
     } else {
