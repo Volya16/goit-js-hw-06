@@ -15,6 +15,7 @@ function createBoxes(amount) {
     box.style.backgroundColor = color;
 
     boxesDiv.append(box);
+    input.value = "";
   }
 }
 
